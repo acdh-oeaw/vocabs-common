@@ -27,6 +27,9 @@ jobs:
       - name: generate build instructions using herokuish
         run: |
           cp -r ./skosmos/vocabularies/dockerfiles/Dockerfile.ubuntu ./skosmos/Dockerfile
+      - name: move docker files into main directory
+        run: |
+          mv ./skosmos/vocabularies/dockerfiles/ ./skosmos
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       - name: Set up Docker Buildx
