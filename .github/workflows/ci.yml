@@ -26,7 +26,7 @@ jobs:
           fi
       - name: generate build instructions using herokuish
         run: |
-          cp -r ./skosmos/vocabularies/dockerfiles/Dockerfile.ubuntu ./skosmos/vocabularies/Dockerfile
+          cp -r ./skosmos/vocabularies/dockerfiles/Dockerfile.ubuntu ./skosmos/Dockerfile
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       - name: Set up Docker Buildx
