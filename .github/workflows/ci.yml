@@ -1,0 +1,59 @@
+name: CI
+
+env:
+  IMAGE_TAG: vocabs-common:2.16
+
+on:
+  push:
+    branches: [prod]
+
+jobs:
+  # deactivated the build-test job from Skosmos, as it should be run against in the dedicated repo (the one where the submodule Skosmos points to)
+  build_and_push_to_registry:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - name: Copy config.ttl
+        run: |
+          if [[ "${{ github.ref_name }}" == "prod" || "${{ github.ref }}" == "refs/heads/prod" ]]; then
+            cp ./config_production.ttl ./skosmos/dockerfiles/config/config-docker.ttl
+          fi
+      - name: generate build instructions using herokuish
+        run: |
+          cp -r ./skosmos/dockerfiles/Dockerfile.ubuntu ./skosmos/Dockerfile
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2 
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          context: ./skosmos/
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            ghcr.io/acdh-oeaw/${{ env.IMAGE_TAG }}${{ github.ref_name }}
+
+  rancher_production:
+    needs: build_and_push_to_registry
+    name: Deploy to rancher production
+    runs-on: ubuntu-latest
+    if: github.base_ref == 'prod' || github.ref == 'refs/heads/prod'
+    environment: "Production"
+    steps:
+    - name: Rancher Deploy Action
+      run: |
+        curl -i -X POST "${{ env.RANCHER_URL }}?action=redeploy" -H "Authorization: Bearer ${{ env.RANCHER_BEARER_TOKEN }}"
+
