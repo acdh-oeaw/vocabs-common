@@ -66,8 +66,10 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
         -e 's!^(\s*ErrorLog)\s+\S+!\1 /proc/self/fd/1!g' \
         "/etc/apache2/apache2.conf"
 
-WORKDIR /var/www/html/vocabularies
+WORKDIR /var/www/html
 RUN rm index.html
+RUN mkdir vocabularies
+WORKDIR /var/www/html/vocabularies
 
 # composer and packages layer
 RUN curl -sS https://getcomposer.org/installer | php
