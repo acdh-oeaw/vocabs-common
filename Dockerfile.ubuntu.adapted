@@ -71,7 +71,7 @@ RUN rm index.html
 
 # composer and packages layer
 RUN curl -sS https://getcomposer.org/installer | php
-COPY composer.json /var/www/html/vocabularies
+COPY vocabularies/composer.json /var/www/html/vocabularies
 RUN php composer.phar install --no-dev --no-autoloader
 
 # skosmos layer
@@ -79,7 +79,7 @@ COPY . /var/www/html
 RUN php composer.phar install --no-dev
 
 # Configure Skosmos
-COPY dockerfiles/config/config-docker.ttl /var/www/html/vocabularies/config.ttl
+COPY vocabularies/dockerfiles/config/config-docker.ttl /var/www/html/vocabularies/config.ttl
 
 HEALTHCHECK --interval=5s --timeout=3s --retries=3 CMD curl -f http://localhost || exit 1
 
