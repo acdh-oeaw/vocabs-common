@@ -6,17 +6,17 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix mdrtype: <http://publications.europa.eu/resource/authority/dataset-type/> .
-@prefix parthenos: <https://isl.ics.forth.gr/parthenos_vocabularies/> .
 
 # Skosmos main configuration
 
+# ACDH-CH-RedmineIssue: 19793
 :config a skosmos:Configuration ;
   # SPARQL endpoint
   # a local Fuseki server is usually on localhost:3030
-  skosmos:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-main/sparql> ;
+  skosmos:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> ;
   # sparql-query extension, or "Generic" for plain SPARQL 1.1
   # set to "JenaText" instead if you use Fuseki with jena-text index
-  # 2022-11-23 kil: JenaText must be created, until then use temporary Generic
+  #2022-11-23 kil: JenaText must be created, until then use temporary Generic
   #skosmos:sparqlDialect "JenaText" ;
   skosmos:sparqlDialect "Generic"
   # whether to enable collation in sparql queries
@@ -25,17 +25,16 @@
   skosmos:sparqlTimeout 20 ;
   skosmos:httpTimeout 5 ;
   # customize the service name
-  # shows up as title, as we redirect also to dariah.eu this is not the place to put ACDH-CH inside
-  skosmos:serviceName "Vocabs services" ;
+  skosmos:serviceName "SSH vocabulary service" ;
   # customize the base element. Set this if the automatic base url detection doesn't work. For example setups behind a proxy.
   # kil(acdh-ch) 2020-09-25: be aware to add the ending trail otherwise concepts do not resolve correctly (if they are pointing to this skosmos)
   # 2020-09-29 kil #18251: Don't use baseHref as we get the domain by the proxy
-  # skosmos:baseHref "https://vocabs.acdh.oeaw.ac.at/" ;
+  # skosmos:baseHref "https://vocabs-commons.acdh-dev.oeaw.ac.at/" ;
   # skosmos:baseHref "https://vocabs.dariah.eu/" ;
   # interface languages available, and the corresponding system locales
   skosmos:languages (
-    [ rdfs:label "en" ; rdf:value "en_GB.utf8" ]
-    [ rdfs:label "de" ; rdf:value "de_DE.utf8" ]
+      [ rdfs:label "en" ; rdf:value "en_GB.utf8" ]
+      [ rdfs:label "de" ; rdf:value "de_DE.utf8" ]
   ) ;
   # how many results (maximum) to load at a time on the search results page
   skosmos:searchResultsSize 20 ;
@@ -68,83 +67,36 @@
 
 # Skosmos vocabularies
 
-# Category cat_general
+# Category cat_sshoc
 
-# ACDH-CH-RedmineIssue: 5448
-:dha a skosmos:Vocabulary , void:Dataset ;
-  dc:title "DHA Taxonomy" ;
-  dc:subject :cat_general ;
+# ACDH-CH-RedmineIssue: 21134
+:invocation-type a skosmos:Vocabulary, void:Dataset ;
+  dc:title "Invocation types"@en ;
+  dc:subject :cat_sshoc ;
   dc:type mdrtype:THESAURUS ;
-  void:uriSpace "https://vocabs.acdh.oeaw.ac.at/dhataxonomy" ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/invocation-type/" ;
   skosmos:defaultLanguage "en" ;
-  skosmos:groupClass skos:Collection ;
   skosmos:language "en" ;
-  skosmos:shortName "dha" ;
+  skosmos:shortName "invocation-type" ;
   skosmos:showNotation "false" ;
   skosmos:showTopConcepts "true" ;
-  skosmos:showChangeList "true" ;
   skosmos:fullAlphabeticalIndex "true" ;
-  skosmos:mainConceptScheme <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/dhaTaxonomyScheme> ;
-  skosmos:sparqlGraph <https://vocabs.acdh.oeaw.ac.at/dhataxonomy> ;
-  void:dataDump <https://vocabs.acdh.oeaw.ac.at/download/dha_v2.0.rdf> ;
-  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-main/sparql> .
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/invocation-type/invocationTypeScheme> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/invocation-type/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
 # Skosmos categories/subjects
 
 :categories a skos:ConceptScheme;
   skos:prefLabel "Skosmos Vocabulary Categories"@en .
 
-:cat_general a skos:Concept ;
+:cat_sshoc a skos:Concept ;
   skos:topConceptOf :categories ;
   skos:inScheme :categories ;
-  skos:prefLabel "Yleiskäsitteet"@fi , "Allmänna begrepp"@sv , "Allgemeine Konzepte"@de , "General concepts"@en .
-
-:cat_metathesaurus a skos:Concept ;
-  skos:topConceptOf :categories ;
-  skos:inScheme :categories ;
-  skos:prefLabel "Meta Thesaurus"@en , "Meta Thesaurus"@de .
-
-:cat_bbt a skos:Concept ;
-  skos:topConceptOf :categories ;
-  skos:inScheme :categories ;
-  skos:prefLabel "Backbone Thesaurus"@en , "Backbone Thesaurus"@de .
-
-:cat_humanities a skos:Concept ;
-  skos:topConceptOf :categories ;
-  skos:inScheme :categories ;
-  skos:prefLabel "Humanities"@en , "Geistes- und Kulturwissenschaften"@de .
-
-:cat_arthistory a skos:Concept ;
-  skos:topConceptOf :categories ;
-  skos:inScheme :categories ;
-  skos:prefLabel "Kunstgeschichte"@de , "Art History"@en .
-
-:cat_culturalhistory a skos:Concept ;
-  skos:topConceptOf :categories ;
-  skos:inScheme :categories ;
-  skos:prefLabel "Kulturgeschichte"@de , "Cultural History"@en .
-
-:cat_archaeology a skos:Concept ;
-  skos:topConceptOf :categories ;
-  skos:inScheme :categories ;
-  skos:prefLabel "Archäologie"@de , "Archaeology"@en .
-
-:cat_music a skos:Concept ;
-  skos:topConceptOf :categories ;
-  skos:inScheme :categories ;
-  skos:prefLabel "Musik"@de , "Music"@en .
-
-:cat_arche a skos:Concept ;
-  skos:topConceptOf :categories ;
-  skos:inScheme :categories ;
-  skos:prefLabel "ARCHE"@de , "ARCHE"@en .
-
-:cat_date a skos:Concept ;
-  skos:topConceptOf :categories ;
-  skos:inScheme :categories ;
-  skos:prefLabel "Date entities"@de , "Date entities"@en .
+  skos:prefLabel "SSHOC"@de , "SSHOC"@en .
 
 # Skosmos mdrtypes
 
 mdrtype:THESAURUS a skos:Concept ;
   skos:prefLabel "Тезаурус"@bg, "Tezaurus"@cs, "Tesaurus"@da, "Thesaurus"@de, "Θησαυρός"@el, "Thesaurus"@en, "Tesaurus"@et, "Tesaurus"@fi, "Thésaurus"@fr, "Pojmovnik"@hr, "Tezaurusz"@hu, "Tesauro"@it, "Tēzaurs"@lv, "Tezauras"@lt, "Teżawru"@mt, "Thesaurus"@nl, "Tesaurus"@no, "Tezaurus"@pl, "Tesauro"@pt, "Tezaur"@ro, "Synonymický slovník"@sk, "Tezaver"@sl, "Tesauro"@es, "Tesaurus"@sv .
+
