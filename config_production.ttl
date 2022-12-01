@@ -16,9 +16,9 @@
   skosmos:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> ;
   # sparql-query extension, or "Generic" for plain SPARQL 1.1
   # set to "JenaText" instead if you use Fuseki with jena-text index
-  #2022-11-23 kil: JenaText must be created, until then use temporary Generic
-  #skosmos:sparqlDialect "JenaText" ;
-  skosmos:sparqlDialect "Generic"
+  # 2022-11-23 kil: JenaText must be created, until then use temporary Generic
+  # skosmos:sparqlDialect "Generic" ;
+  skosmos:sparqlDialect "JenaText" ;
   # whether to enable collation in sparql queries
   # skosmos:sparqlCollationEnabled ? ;
   # HTTP client configuration
@@ -71,18 +71,35 @@
 
 # ACDH-CH-RedmineIssue: 21134
 :invocation-type a skosmos:Vocabulary, void:Dataset ;
-  dc:title "Invocation types"@en ;
+  dc:title "Invocation type"@en ;
   dc:subject :cat_sshoc ;
   dc:type mdrtype:THESAURUS ;
-  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/invocation-type/" ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/invocation-type" ;
   skosmos:defaultLanguage "en" ;
   skosmos:language "en" ;
   skosmos:shortName "invocation-type" ;
   skosmos:showNotation "false" ;
   skosmos:showTopConcepts "true" ;
   skosmos:fullAlphabeticalIndex "true" ;
-  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/invocation-type/invocationTypeScheme> ;
-  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/invocation-type/> ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/invocation-type/Scheme> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/invocation-type> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
+
+# ACDH-CH-RedmineIssue: 21193
+:sshoc-audience a skosmos:Vocabulary, void:Dataset ;
+  dc:title "Intended audience"@en ;
+  dc:subject :cat_sshoc ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:language "en" ;
+  skosmos:shortName "sshoc-audience" ;
+  skosmos:showNotation "false" ;
+  skosmos:showTopConcepts "false" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:groupClass skos:Collection ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/Scheme> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
 # Skosmos categories/subjects
