@@ -75,9 +75,9 @@
   dc:subject :cat_sshoc ;
   dc:type mdrtype:THESAURUS ;
   void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/invocation-type" ;
-  skosmos:defaultLanguage "en" ;
-  skosmos:language "en" ;
   skosmos:shortName "invocation-type" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
   skosmos:showNotation "false" ;
   skosmos:showTopConcepts "true" ;
   skosmos:fullAlphabeticalIndex "true" ;
@@ -91,15 +91,47 @@
   dc:subject :cat_sshoc ;
   dc:type mdrtype:THESAURUS ;
   void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience" ;
-  skosmos:defaultLanguage "en" ;
-  skosmos:language "en" ;
   skosmos:shortName "sshoc-audience" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
   skosmos:showNotation "false" ;
   skosmos:showTopConcepts "false" ;
   skosmos:fullAlphabeticalIndex "true" ;
   skosmos:groupClass skos:Collection ;
   skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/Scheme> ;
   skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
+
+# ACDH-CH-RedmineIssue: 21307
+:sshoc-training-resource-status a skosmos:Vocabulary, void:Dataset ;
+  dc:title "Status of training resources"@en ;
+  dc:subject :cat_sshoc ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/sshoc-training-resource-status/" ;
+  skosmos:shortName "sshoc-training-resource-status" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:language "en" ;
+  skosmos:showNotation "false" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/sshoc-training-resource-status/> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshoc-training-resource-status/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
+
+# ACDH-CH-RedmineIssue: 21310
+:sshoc-training-resource-format a skosmos:Vocabulary, void:Dataset ;
+  dc:title "Formats of training resources"@en ;
+  dc:subject :cat_sshoc ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/sshoc-training-resource-format/" ;
+  skosmos:shortName "sshoc-training-resource-format" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showNotation "false" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/sshoc-training-resource-format/> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshoc-training-resource-format/> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
 # Skosmos categories/subjects
