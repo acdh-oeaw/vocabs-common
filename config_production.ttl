@@ -20,7 +20,7 @@
   # skosmos:sparqlDialect "Generic" ;
   skosmos:sparqlDialect "JenaText" ;
   # whether to enable collation in sparql queries
-  # skosmos:sparqlCollationEnabled ? ;
+  skosmos:sparqlCollationEnabled false ;
   # HTTP client configuration
   skosmos:sparqlTimeout 20 ;
   skosmos:httpTimeout 5 ;
@@ -33,8 +33,25 @@
   # skosmos:baseHref "https://vocabs.dariah.eu/" ;
   # interface languages available, and the corresponding system locales
   skosmos:languages (
-      [ rdfs:label "en" ; rdf:value "en_GB.utf8" ]
-      [ rdfs:label "de" ; rdf:value "de_DE.utf8" ]
+    [ rdfs:label "en" ; rdf:value "en_GB.utf8" ]
+    [ rdfs:label "de" ; rdf:value "de_DE.utf8" ]
+    [ rdfs:label "ar" ; rdf:value "ar_AE.utf8" ]
+    [ rdfs:label "da" ; rdf:value "da_DK.utf8" ]
+    [ rdfs:label "en_US" ; rdf:value "en_US.utf8" ]
+    [ rdfs:label "es" ; rdf:value "es_ES.utf8" ]
+    [ rdfs:label "fa" ; rdf:value "fa_IR.utf8" ]
+    [ rdfs:label "fi" ; rdf:value "fi_FI.utf8" ]
+    [ rdfs:label "fr" ; rdf:value "fr_FR.utf8" ]
+    [ rdfs:label "it" ; rdf:value "it_IT.utf8" ]
+    [ rdfs:label "nb" ; rdf:value "nb_NO.utf8" ]
+    [ rdfs:label "nl" ; rdf:value "nl_NL.utf8" ]
+    [ rdfs:label "nn" ; rdf:value "nn_NO.utf8" ]
+    [ rdfs:label "pl" ; rdf:value "pl_PL.utf8" ]
+    [ rdfs:label "pt" ; rdf:value "pt_PT.utf8" ]
+    [ rdfs:label "pt_BR" ; rdf:value "pt_BR.utf8" ]
+    [ rdfs:label "ru" ; rdf:value "ru_RU.utf8" ]
+    [ rdfs:label "sv" ; rdf:value "sv_SE.utf8" ]
+    [ rdfs:label "zh" ; rdf:value "zh_CN.utf8" ]
   ) ;
   # how many results (maximum) to load at a time on the search results page
   skosmos:searchResultsSize 20 ;
@@ -53,7 +70,7 @@
   # default email address where to send the feedback
   skosmos:feedbackAddress "" ;
   # email address to set as the sender for feedback messages
-  # skosmos:feedbackSender "?" ;
+  skosmos:feedbackSender "" ;
   # email address to set as the envelope sender for feedback messages
   skosmos:feedbackEnvelopeSender "" ;
   # whether to display the ui language selection as a dropdown (useful for cases where there are more than 3 languages) 
@@ -67,61 +84,63 @@
 
 # Skosmos vocabularies
 
-# Category cat_sshoc
+# Category :cat_sshmp
+
+# ACDH-CH-RedmineIssue: 21383
+:eosc-geographical-availability a skosmos:Vocabulary, void:Dataset ;
+  dc:title "EOSC Resource Geographical Availability"@en ;
+  dc:subject :cat_sshmp ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/" ;
+  skosmos:shortName "eosc-geographical-availability" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showNotation "false" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/eoscGeographicalAvailabilityScheme> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
+
+# ACDH-CH-RedmineIssue: 21193
+:sshoc-audience a skosmos:Vocabulary, void:Dataset ;
+  dc:title "Intended audience"@en ;
+  dc:subject :cat_sshmp , :cat_sshtdt ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/" ;
+  skosmos:shortName "sshoc-audience" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showNotation "false" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:groupClass skos:Collection ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/audienceScheme> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
 # ACDH-CH-RedmineIssue: 21134
 :invocation-type a skosmos:Vocabulary, void:Dataset ;
   dc:title "Invocation type"@en ;
-  dc:subject :cat_sshoc ;
+  dc:subject :cat_sshmp , :cat_sshconv ;
   dc:type mdrtype:THESAURUS ;
-  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/invocation-type" ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/invocation-type/" ;
   skosmos:shortName "invocation-type" ;
   skosmos:language "en" ;
   skosmos:defaultLanguage "en" ;
   skosmos:showNotation "false" ;
   skosmos:showTopConcepts "true" ;
   skosmos:fullAlphabeticalIndex "true" ;
-  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/invocation-type/Scheme> ;
-  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/invocation-type> ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/invocation-type/invocationTypeScheme> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/invocation-type/> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
-# ACDH-CH-RedmineIssue: 21193
-:sshoc-audience a skosmos:Vocabulary, void:Dataset ;
-  dc:title "Intended audience"@en ;
-  dc:subject :cat_sshoc ;
-  dc:type mdrtype:THESAURUS ;
-  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience" ;
-  skosmos:shortName "sshoc-audience" ;
-  skosmos:language "en" ;
-  skosmos:defaultLanguage "en" ;
-  skosmos:showNotation "false" ;
-  skosmos:showTopConcepts "false" ;
-  skosmos:fullAlphabeticalIndex "true" ;
-  skosmos:groupClass skos:Collection ;
-  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/Scheme> ;
-  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience> ;
-  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
-
-# ACDH-CH-RedmineIssue: 21307
-:sshoc-training-resource-status a skosmos:Vocabulary, void:Dataset ;
-  dc:title "Status of training resources"@en ;
-  dc:subject :cat_sshoc ;
-  dc:type mdrtype:THESAURUS ;
-  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/sshoc-training-resource-status/" ;
-  skosmos:shortName "sshoc-training-resource-status" ;
-  skosmos:defaultLanguage "en" ;
-  skosmos:language "en" ;
-  skosmos:showNotation "false" ;
-  skosmos:showTopConcepts "true" ;
-  skosmos:fullAlphabeticalIndex "true" ;
-  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/sshoc-training-resource-status/> ;
-  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshoc-training-resource-status/> ;
-  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
+# Category :cat_sshtdt
 
 # ACDH-CH-RedmineIssue: 21310
 :sshoc-training-resource-format a skosmos:Vocabulary, void:Dataset ;
   dc:title "Formats of training resources"@en ;
-  dc:subject :cat_sshoc ;
+  dc:subject :cat_sshtdt ;
   dc:type mdrtype:THESAURUS ;
   void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/sshoc-training-resource-format/" ;
   skosmos:shortName "sshoc-training-resource-format" ;
@@ -134,10 +153,41 @@
   skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshoc-training-resource-format/> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
+# ACDH-CH-RedmineIssue: 21307
+:sshoc-training-resource-status a skosmos:Vocabulary, void:Dataset ;
+  dc:title "Status of training resources"@en ;
+  dc:subject :cat_sshtdt ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/sshoc-training-resource-status/" ;
+  skosmos:shortName "sshoc-training-resource-status" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:language "en" ;
+  skosmos:showNotation "false" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/sshoc-training-resource-status/> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshoc-training-resource-status/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
+
 # Skosmos categories/subjects
 
 :categories a skos:ConceptScheme;
   skos:prefLabel "Skosmos Vocabulary Categories"@en .
+
+:cat_sshmp a skos:Concept ;
+  skos:topConceptOf :categories ;
+  skos:inScheme :categories ;
+  skos:prefLabel "SSH Open Marketplace"@de , "SSH Open Marketplace"@en .
+
+:cat_sshconv a skos:Concept ;
+  skos:topConceptOf :categories ;
+  skos:inScheme :categories ;
+  skos:prefLabel "SSH Conversion Hub"@de , "SSH Conversion Hub"@en .
+
+:cat_sshtdt a skos:Concept ;
+  skos:topConceptOf :categories ;
+  skos:inScheme :categories ;
+  skos:prefLabel "SSH Training Discovery Toolkit"@de , "SSH Training Discovery Toolkit"@en .
 
 :cat_sshoc a skos:Concept ;
   skos:topConceptOf :categories ;
