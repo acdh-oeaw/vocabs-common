@@ -86,6 +86,22 @@
 
 # Category :cat_sshmp
 
+# ACDH-CH-RedmineIssue: 21386
+:eosc-resource-category a skosmos:Vocabulary, void:Dataset ;
+  dc:title "EOSC Resource Category, Subcategory (and Supercategory)"@en ;
+  dc:subject :cat_sshmp ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/eosc-resource-category/" ;
+  skosmos:shortName "eosc-resource-category" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showNotation "false" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "false" ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/eosc-resource-category/eoscResourceCategoryScheme> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/eosc-resource-category/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
+
 # ACDH-CH-RedmineIssue: 21383
 :eosc-geographical-availability a skosmos:Vocabulary, void:Dataset ;
   dc:title "EOSC Resource Geographical Availability"@en ;
@@ -101,6 +117,55 @@
   skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/eoscGeographicalAvailabilityScheme> ;
   skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
+
+# ACDH-CH-RedmineIssue: 21385
+:eosc-life-cycle-status a skosmos:Vocabulary, void:Dataset ;
+  dc:title "EOSC Resource Life Cycle Status"@en ;
+  dc:subject :cat_sshmp ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/" ;
+  skosmos:shortName "eosc-life-cycle-status" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showNotation "false" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/eoscLifeCycleStatusScheme> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
+
+# ACDH-CH-RedmineIssue: 21387
+:eosc-technology-readiness-level a skosmos:Vocabulary, void:Dataset ;
+  dc:title "EOSC Resource Technology Readiness Level"@en ;
+  dc:subject :cat_sshmp ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/eosc-technology-readiness-level/" ;
+  skosmos:shortName "eosc-technology-readiness-level" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showNotation "false" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/eosc-technology-readiness-level/eoscTechnologyReadinessLevelScheme> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/eosc-technology-readiness-level/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
+
+# ACDH-CH-RedmineIssue: 
+# FILL OUT THE REDMINE ISSUE!!!
+:media-type a skosmos:Vocabulary, void:Dataset ;
+  dc:title "IANA Media Types"@en ;
+  dc:subject :cat_sshoc ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/media-type/" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:language "en" ;
+  skosmos:shortName "media-type" ;
+  skosmos:showNotation "false" ;
+  skosmos:showTopConcepts "false" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/media-type/mediaTypeScheme> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/media-type/> ;
+  void:sparqlEndpoint <http://skosmos-jena:3030/vocabs-common/sparql> .
 
 # ACDH-CH-RedmineIssue: 21193
 :sshoc-audience a skosmos:Vocabulary, void:Dataset ;
