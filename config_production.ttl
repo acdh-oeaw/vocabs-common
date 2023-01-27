@@ -86,6 +86,22 @@
 
 # Category :cat_sshmp
 
+# ACDH-CH-RedmineIssue: 21417
+:publication-type a skosmos:Vocabulary, void:Dataset ;
+  dc:title "BIBO Publication Type"@en ;
+  dc:subject :cat_sshmp ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "http://purl.org/ontology/bibo/" ;
+  skosmos:shortName "publication-type" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showNotation "false" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:mainConceptScheme <http://purl.org/ontology/bibo/publicationTypeScheme> ;
+  skosmos:sparqlGraph <http://purl.org/ontology/bibo/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
+
 # ACDH-CH-RedmineIssue: 21386
 :eosc-resource-category a skosmos:Vocabulary, void:Dataset ;
   dc:title "EOSC Resource Category, Subcategory (and Supercategory)"@en ;
@@ -150,22 +166,21 @@
   skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/eosc-technology-readiness-level/> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
-# ACDH-CH-RedmineIssue: 
-# FILL OUT THE REDMINE ISSUE!!!
+# ACDH-CH-RedmineIssue: 21413
 :media-type a skosmos:Vocabulary, void:Dataset ;
   dc:title "IANA Media Types"@en ;
-  dc:subject :cat_sshoc ;
+  dc:subject :cat_sshmp , :cat_sshconv ;
   dc:type mdrtype:THESAURUS ;
   void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/media-type/" ;
-  skosmos:defaultLanguage "en" ;
-  skosmos:language "en" ;
   skosmos:shortName "media-type" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
   skosmos:showNotation "false" ;
-  skosmos:showTopConcepts "false" ;
-  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "false" ;
   skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/media-type/mediaTypeScheme> ;
   skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/media-type/> ;
-  void:sparqlEndpoint <http://skosmos-jena:3030/vocabs-common/sparql> .
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
 # ACDH-CH-RedmineIssue: 21193
 :sshoc-audience a skosmos:Vocabulary, void:Dataset ;
@@ -198,6 +213,38 @@
   skosmos:fullAlphabeticalIndex "true" ;
   skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/invocation-type/invocationTypeScheme> ;
   skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/invocation-type/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
+
+# ACDH-CH-RedmineIssue: 21415
+:software-license a skosmos:Vocabulary, void:Dataset ;
+  dc:title "SPDX Software License"@en ;
+  dc:subject :cat_sshmp , :cat_sshconv , :cat_sshtdt ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "http://spdx.org/licenses/" ;
+  skosmos:shortName "software-license" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showNotation "false" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "false" ;
+  skosmos:mainConceptScheme <https://sshoc.poolparty.biz/Vocabularies/f8e37d35-c5fe-48d5-a9e1-2f8116726980> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/software-license/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
+
+# ACDH-CH-RedmineIssue: 21416
+:standard a skosmos:Vocabulary, void:Dataset ;
+  dc:title "SSK Standard"@en ;
+  dc:subject :cat_sshmp ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/standard/" ;
+  skosmos:shortName "standard" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showNotation "false" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "false" ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/standard/standardScheme> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/standard/> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
 # Category :cat_sshtdt
