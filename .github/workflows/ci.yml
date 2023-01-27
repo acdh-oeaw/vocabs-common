@@ -51,9 +51,8 @@ jobs:
     name: Deploy to rancher production
     runs-on: ubuntu-latest
     if: github.base_ref == 'prod' || github.ref == 'refs/heads/prod'
-    environment: "Production"
     steps:
     - name: Rancher Deploy Action
       run: |
-        curl -i -X POST "${{ env.RANCHER_URL }}?action=redeploy" -H "Authorization: Bearer ${{ env.RANCHER_BEARER_TOKEN }}"
+        curl -i -X POST "${{ secrets.RANCHER_URL_PRODUCTION }}?action=redeploy" -H "Authorization: Bearer ${{ secrets.RANCHER_BEARER_TOKEN }}"
 
