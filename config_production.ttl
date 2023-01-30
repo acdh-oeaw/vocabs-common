@@ -84,12 +84,12 @@
 
 # Skosmos vocabularies
 
-# Category :cat_sshmp
+# Category :cat_sshomp
 
 # ACDH-CH-RedmineIssue: 21417
 :publication-type a skosmos:Vocabulary, void:Dataset ;
   dc:title "BIBO Publication Type"@en ;
-  dc:subject :cat_sshmp ;
+  dc:subject :cat_sshomp ;
   dc:type mdrtype:THESAURUS ;
   void:uriSpace "http://purl.org/ontology/bibo/" ;
   skosmos:shortName "publication-type" ;
@@ -105,7 +105,7 @@
 # ACDH-CH-RedmineIssue: 21386
 :eosc-resource-category a skosmos:Vocabulary, void:Dataset ;
   dc:title "EOSC Resource Category, Subcategory (and Supercategory)"@en ;
-  dc:subject :cat_sshmp ;
+  dc:subject :cat_sshomp ;
   dc:type mdrtype:THESAURUS ;
   void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/eosc-resource-category/" ;
   skosmos:shortName "eosc-resource-category" ;
@@ -121,7 +121,7 @@
 # ACDH-CH-RedmineIssue: 21383
 :eosc-geographical-availability a skosmos:Vocabulary, void:Dataset ;
   dc:title "EOSC Resource Geographical Availability"@en ;
-  dc:subject :cat_sshmp ;
+  dc:subject :cat_sshomp ;
   dc:type mdrtype:THESAURUS ;
   void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/" ;
   skosmos:shortName "eosc-geographical-availability" ;
@@ -137,7 +137,7 @@
 # ACDH-CH-RedmineIssue: 21385
 :eosc-life-cycle-status a skosmos:Vocabulary, void:Dataset ;
   dc:title "EOSC Resource Life Cycle Status"@en ;
-  dc:subject :cat_sshmp ;
+  dc:subject :cat_sshomp ;
   dc:type mdrtype:THESAURUS ;
   void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/" ;
   skosmos:shortName "eosc-life-cycle-status" ;
@@ -153,7 +153,7 @@
 # ACDH-CH-RedmineIssue: 21387
 :eosc-technology-readiness-level a skosmos:Vocabulary, void:Dataset ;
   dc:title "EOSC Resource Technology Readiness Level"@en ;
-  dc:subject :cat_sshmp ;
+  dc:subject :cat_sshomp ;
   dc:type mdrtype:THESAURUS ;
   void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/eosc-technology-readiness-level/" ;
   skosmos:shortName "eosc-technology-readiness-level" ;
@@ -169,7 +169,7 @@
 # ACDH-CH-RedmineIssue: 21413
 :media-type a skosmos:Vocabulary, void:Dataset ;
   dc:title "IANA Media Types"@en ;
-  dc:subject :cat_sshmp , :cat_sshconv ;
+  dc:subject :cat_sshomp , :cat_sshconv ;
   dc:type mdrtype:THESAURUS ;
   void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/media-type/" ;
   skosmos:shortName "media-type" ;
@@ -185,7 +185,7 @@
 # ACDH-CH-RedmineIssue: 21193
 :sshoc-audience a skosmos:Vocabulary, void:Dataset ;
   dc:title "Intended audience"@en ;
-  dc:subject :cat_sshmp , :cat_sshtdt ;
+  dc:subject :cat_sshomp , :cat_sshtdt ;
   dc:type mdrtype:THESAURUS ;
   void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/" ;
   skosmos:shortName "sshoc-audience" ;
@@ -202,7 +202,7 @@
 # ACDH-CH-RedmineIssue: 21134
 :invocation-type a skosmos:Vocabulary, void:Dataset ;
   dc:title "Invocation type"@en ;
-  dc:subject :cat_sshmp , :cat_sshconv ;
+  dc:subject :cat_sshomp , :cat_sshconv ;
   dc:type mdrtype:THESAURUS ;
   void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/invocation-type/" ;
   skosmos:shortName "invocation-type" ;
@@ -218,7 +218,7 @@
 # ACDH-CH-RedmineIssue: 21415
 :software-license a skosmos:Vocabulary, void:Dataset ;
   dc:title "SPDX Software License"@en ;
-  dc:subject :cat_sshmp , :cat_sshconv , :cat_sshtdt ;
+  dc:subject :cat_sshomp , :cat_sshconv , :cat_sshtdt ;
   dc:type mdrtype:THESAURUS ;
   void:uriSpace "http://spdx.org/licenses/" ;
   skosmos:shortName "software-license" ;
@@ -231,10 +231,26 @@
   skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/software-license/> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
+# ACDH-CH-RedmineIssue: 21424
+:sshomp-keyword a skosmos:Vocabulary, void:Dataset ;
+  dc:title "SSH Open Marketplace Keyword"@en ;
+  dc:subject :cat_sshomp ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/sshomp-keyword/" ;
+  skosmos:shortName "sshomp-keyword" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showNotation "false" ;
+  skosmos:showTopConcepts "false" ;
+  skosmos:fullAlphabeticalIndex "false" ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/sshomp-keyword/> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshomp-keyword/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
+
 # ACDH-CH-RedmineIssue: 21416
 :standard a skosmos:Vocabulary, void:Dataset ;
   dc:title "SSK Standard"@en ;
-  dc:subject :cat_sshmp ;
+  dc:subject :cat_sshomp ;
   dc:type mdrtype:THESAURUS ;
   void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/standard/" ;
   skosmos:shortName "standard" ;
@@ -281,12 +297,46 @@
   skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshoc-training-resource-status/> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
+# Category :cat_sshoc
+
+# ACDH-CH-RedmineIssue: 21422
+:sshocterm a skosmos:Vocabulary, void:Dataset ;
+  dc:title "SSHOC Multilingual Data Stewardship Terminology"@en ;
+  dc:subject :cat_sshoc ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/sshocterm/" ;
+  skosmos:shortName "sshocterm" ;
+  skosmos:language "en", "nl", "el", "fr", "de", "it", "sl" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showNotation "false" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "false" ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/sshocterm/> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshocterm/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
+
+# ACDH-CH-RedmineIssue: 21423
+:sshocmm a skosmos:Vocabulary, void:Dataset ;
+  dc:title "SSHOC Multilingual Metadata"@en ;
+  dc:subject :cat_sshoc ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/sshocmm/" ;
+  skosmos:shortName "sshocmm" ;
+  skosmos:language "en", "nl", "el", "fr", "de", "it", "sl" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showNotation "false" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "false" ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/sshocmm> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshocmm/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
+
 # Skosmos categories/subjects
 
 :categories a skos:ConceptScheme;
   skos:prefLabel "Skosmos Vocabulary Categories"@en .
 
-:cat_sshmp a skos:Concept ;
+:cat_sshomp a skos:Concept ;
   skos:topConceptOf :categories ;
   skos:inScheme :categories ;
   skos:prefLabel "SSH Open Marketplace"@de , "SSH Open Marketplace"@en .
