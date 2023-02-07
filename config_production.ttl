@@ -100,6 +100,7 @@
   skosmos:fullAlphabeticalIndex "true" ;
   skosmos:mainConceptScheme <http://purl.org/ontology/bibo/publicationTypeScheme> ;
   skosmos:sparqlGraph <http://purl.org/ontology/bibo/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/SSHOpenMarketplace/publication-type/publication-type.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
 # ACDH-CH-RedmineIssue: 21386
@@ -116,6 +117,7 @@
   skosmos:fullAlphabeticalIndex "false" ;
   skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/eosc-resource-category/eoscResourceCategoryScheme> ;
   skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/eosc-resource-category/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/SSHOpenMarketplace/eosc/resource-category/eosc-resource-category.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
 # ACDH-CH-RedmineIssue: 21383
@@ -132,6 +134,7 @@
   skosmos:fullAlphabeticalIndex "true" ;
   skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/eoscGeographicalAvailabilityScheme> ;
   skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/eosc-geographical-availability/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/SSHOpenMarketplace/eosc/geographical-availability/eosc-geographical-availability.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
 # ACDH-CH-RedmineIssue: 21385
@@ -148,6 +151,7 @@
   skosmos:fullAlphabeticalIndex "true" ;
   skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/eoscLifeCycleStatusScheme> ;
   skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/eosc-life-cycle-status/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/SSHOpenMarketplace/eosc/life-cycle-status/eosc-life-cycle-status.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
 # ACDH-CH-RedmineIssue: 21387
@@ -164,6 +168,7 @@
   skosmos:fullAlphabeticalIndex "true" ;
   skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/eosc-technology-readiness-level/eoscTechnologyReadinessLevelScheme> ;
   skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/eosc-technology-readiness-level/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/SSHOpenMarketplace/eosc/technology-readiness-level/eosc-technology-readiness-level.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
 # ACDH-CH-RedmineIssue: 21413
@@ -180,6 +185,7 @@
   skosmos:fullAlphabeticalIndex "false" ;
   skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/media-type/mediaTypeScheme> ;
   skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/media-type/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/SSHOpenMarketplace/iana-media-types/iana-media-type.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
 # ACDH-CH-RedmineIssue: 21193
@@ -197,6 +203,7 @@
   skosmos:groupClass skos:Collection ;
   skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/audienceScheme> ;
   skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshoc-audience/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/SSHOpenMarketplace/sshoc-audience/audience.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
 # ACDH-CH-RedmineIssue: 21134
@@ -213,6 +220,7 @@
   skosmos:fullAlphabeticalIndex "true" ;
   skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/invocation-type/invocationTypeScheme> ;
   skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/invocation-type/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/SSHOpenMarketplace/invocation-type/invocation-type.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
 # ACDH-CH-RedmineIssue: 21415
@@ -229,6 +237,7 @@
   skosmos:fullAlphabeticalIndex "false" ;
   skosmos:mainConceptScheme <https://sshoc.poolparty.biz/Vocabularies/f8e37d35-c5fe-48d5-a9e1-2f8116726980> ;
   skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/software-license/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/SSHOpenMarketplace/software-license/software-license.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
 # ACDH-CH-RedmineIssue: 21424
@@ -245,6 +254,7 @@
   skosmos:fullAlphabeticalIndex "false" ;
   skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/sshomp-keyword/> ;
   skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshomp-keyword/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/SSHOpenMarketplace/sshomp-keyword/sshomp-keyword.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
 # ACDH-CH-RedmineIssue: 21416
@@ -261,6 +271,7 @@
   skosmos:fullAlphabeticalIndex "false" ;
   skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/standard/standardScheme> ;
   skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/standard/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/SSHOpenMarketplace/standard/standard.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
 # Category :cat_sshtdt
@@ -279,6 +290,7 @@
   skosmos:fullAlphabeticalIndex "true" ;
   skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/sshoc-training-resource-format/> ;
   skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshoc-training-resource-format/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/SSHTrainingDiscoveryToolkit/sshoc-training-resource-format/sshoc-training-resource-format.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
 # ACDH-CH-RedmineIssue: 21307
@@ -295,6 +307,7 @@
   skosmos:fullAlphabeticalIndex "true" ;
   skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/sshoc-training-resource-status/> ;
   skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshoc-training-resource-status/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/SSHTrainingDiscoveryToolkit/sshoc-training-resource-status/sshoc-training-resource-status.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
 # Category :cat_sshoc
@@ -313,6 +326,7 @@
   skosmos:fullAlphabeticalIndex "false" ;
   skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/sshocterm/> ;
   skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshocterm/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/SSHOC/data-stewardship-terminology/data-stewardship-terminology.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
 # ACDH-CH-RedmineIssue: 21423
@@ -329,6 +343,7 @@
   skosmos:fullAlphabeticalIndex "false" ;
   skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/sshocmm> ;
   skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshocmm/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/SSHOC/multilingual-metadata/multilingual-metadata.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
 # Skosmos categories/subjects
