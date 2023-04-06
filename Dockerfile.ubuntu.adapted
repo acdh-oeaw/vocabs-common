@@ -55,7 +55,7 @@ ENV LANG=en_US.UTF-8
 # timezone
 RUN sed -i 's/;date.timezone =/date.timezone = "UTC"/g' /etc/php/7.4/apache2/php.ini
 
-COPY vocabularies/dockerfiles/config/000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY browse/dockerfiles/config/000-default.conf /etc/apache2/sites-available/000-default.conf
 
 RUN a2enmod rewrite
 RUN a2enmod expires
@@ -68,12 +68,12 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
 
 WORKDIR /var/www/html
 RUN rm index.html
-RUN mkdir vocabularies
-WORKDIR /var/www/html/vocabularies
+RUN mkdir browse
+WORKDIR /var/www/html/browse
 
 # composer and packages layer
 RUN curl -sS https://getcomposer.org/installer | php
-COPY vocabularies/composer.json /var/www/html/vocabularies
+COPY browse/composer.json /var/www/html/browse
 RUN php composer.phar install --no-dev --no-autoloader
 
 # skosmos layer
@@ -81,7 +81,7 @@ COPY . /var/www/html
 RUN php composer.phar install --no-dev
 
 # Configure Skosmos
-COPY vocabularies/dockerfiles/config/config-docker.ttl /var/www/html/vocabularies/config.ttl
+COPY browse/dockerfiles/config/config-docker.ttl /var/www/html/browse/config.ttl
 
 HEALTHCHECK --interval=5s --timeout=3s --retries=3 CMD curl -f http://localhost || exit 1
 

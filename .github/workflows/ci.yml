@@ -22,7 +22,7 @@ jobs:
       - name: Copy config.ttl
         run: |
           if [[ "${{ github.ref_name }}" == "prod" || "${{ github.ref }}" == "refs/heads/prod" ]]; then
-            cp ./config_production.ttl ./skosmos/vocabularies/dockerfiles/config/config-docker.ttl
+            cp ./config_production.ttl ./skosmos/browse/dockerfiles/config/config-docker.ttl
           fi
       - name: generate build instructions using herokuish
         run: |
