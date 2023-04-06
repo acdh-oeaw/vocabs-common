@@ -1,6 +1,3 @@
-[submodule "skosmos/vocabularies"]
-	path = skosmos/vocabularies
-	url = https://github.com/acdh-oeaw/vocabs-update-theme
 [submodule "skosmos/browse"]
 	path = skosmos/browse
 	url = https://github.com/acdh-oeaw/vocabs-update-theme.git
