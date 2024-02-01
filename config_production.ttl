@@ -346,6 +346,44 @@
   void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/SSHOC/multilingual-metadata/multilingual-metadata.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
+# Category :cat_csd
+
+# ACDH-CH-RedmineIssue: 22252
+:csd-linguistic-subjects a skosmos:Vocabulary, void:Dataset ;
+  dc:title "CLARIN taxonomy for Linguistic Subjects"@en ;
+  dc:subject :cat_csd ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/csd-linguistic-subjects/" ;
+  skosmos:shortName "csd-linguistic-subjects" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:showNotation "false" ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/csd-linguistic-subjects/> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/csd-linguistic-subjects/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/CSD/csd_linguistic_subjects/CSDLinguisticSubjects.ttl> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql>
+.
+
+# ACDH-CH-RedmineIssue: 22270
+:csd-tool-tasks a skosmos:Vocabulary, void:Dataset ;
+  dc:title "CLARIN taxonomy for tools and services tasks"@en ;
+  dc:subject :cat_csd ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/csd-tool-tasks/" ;
+  skosmos:shortName "csd-tool-tasks" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:showNotation "false" ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/csd-tool-tasks/> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/csd-tool-tasks/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/CSD/csd_tool_tasks/CSDToolTasks.ttl> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql>
+.
+
 # Skosmos categories/subjects
 
 :categories a skos:ConceptScheme;
@@ -370,6 +408,11 @@
   skos:topConceptOf :categories ;
   skos:inScheme :categories ;
   skos:prefLabel "SSHOC"@de , "SSHOC"@en .
+
+:cat_csd a skos:Concept ;
+  skos:topConceptOf :categories ;
+  skos:inScheme :categories ;
+  skos:prefLabel "CSD"@de , "CSD"@en .
 
 # Skosmos mdrtypes
 
