@@ -412,7 +412,7 @@
 :cat_csd a skos:Concept ;
   skos:topConceptOf :categories ;
   skos:inScheme :categories ;
-  skos:prefLabel "CSD"@de , "CSD"@en .
+  skos:prefLabel "CLARIN Service Description"@de , "CLARIN Service Description"@en .
 
 # Skosmos mdrtypes
 
