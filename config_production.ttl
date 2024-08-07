@@ -240,6 +240,25 @@
   void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/SSHOpenMarketplace/software-license/software-license.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
+# ACDH-CH-RedmineIssue: 22506 
+:sshomp-format a skosmos:Vocabulary, void:Dataset ;
+  dc:title "SSH Open Marketplace Format"@en ;
+  dc:subject :cat_sshomp ; 
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/sshomp-format/" ;
+  skosmos:shortName "sshomp-format" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showTopConcepts "true" ; 
+  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:showNotation "false" ;
+  skosmos:hasMultiLingualProperty "false" ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/sshomp-format/> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshomp-format/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/SSHOpenMarketplace/sshomp-format/sshomp-format.ttl> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql>
+. 
+
 # ACDH-CH-RedmineIssue: 21424
 :sshomp-keyword a skosmos:Vocabulary, void:Dataset ;
   dc:title "SSH Open Marketplace Keyword"@en ;
