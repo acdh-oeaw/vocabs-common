@@ -451,7 +451,7 @@
 :cat_eosc a skos:Concept ;
   skos:topConceptOf :categories ;
   skos:inScheme :categories ;
-  skos:prefLabel "EOSC"@de , "EOSC"@en .
+  skos:prefLabel "European Open Science Cloud"@de , "European Open Science Cloud"@en .
 
 :cat_csd a skos:Concept ;
   skos:topConceptOf :categories ;
