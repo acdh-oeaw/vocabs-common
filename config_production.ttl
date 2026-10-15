@@ -428,6 +428,11 @@
   skos:inScheme :categories ;
   skos:prefLabel "SSHOC"@de , "SSHOC"@en .
 
+:cat_eosc a skos:Concept ;
+  skos:topConceptOf :categories ;
+  skos:inScheme :categories ;
+  skos:prefLabel "EOSC"@de , "EOSC"@en .
+
 :cat_csd a skos:Concept ;
   skos:topConceptOf :categories ;
   skos:inScheme :categories ;
