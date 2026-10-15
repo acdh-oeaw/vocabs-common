@@ -365,6 +365,26 @@
   void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/SSHOC/multilingual-metadata/multilingual-metadata.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
+# Category :cat_eosc
+
+# ACDH-RedmineIssue: 28162
+:oscars-eosc a skosmos:Vocabulary, void:Dataset ;
+  dc:title "OSCARS / EOSC Glossary"@en ;
+  dc:subject :cat_eosc ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/oscars-eosc/" ;
+  skosmos:shortName "oscars-eosc" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:showNotation "false" ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/oscars-eosc/> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/oscars-eosc/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/EOSC/oscars-eosc/oscars-eosc.ttl> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql>
+.
+
 # Category :cat_csd
 
 # ACDH-CH-RedmineIssue: 22252
