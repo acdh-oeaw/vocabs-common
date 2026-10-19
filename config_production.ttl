@@ -291,6 +291,7 @@
   skosmos:fullAlphabeticalIndex "true" ;
   skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/sshomp-resource-type/> ;
   skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshomp-resource-type/> ;
+  void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/SSHOpenMarketplace/resource-type/sshomp-resource-type.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql>
 .
 
