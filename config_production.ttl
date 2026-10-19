@@ -276,6 +276,24 @@
   void:dataDump <https://vocabs-downloads.acdh.oeaw.ac.at/vocabs-common/SSHOpenMarketplace/sshomp-keyword/sshomp-keyword.ttl> ;
   void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql> .
 
+# ACDH-RedmineIssue: 29236
+:sshomp-resource-type a skosmos:Vocabulary, void:Dataset ;
+  dc:title "SSH Open Marketplace Resource Type" ;
+  dc:subject :cat_sshomp ;
+  dc:type mdrtype:THESAURUS ;
+  void:uriSpace "https://vocabs.sshopencloud.eu/vocabularies/sshomp-resource-type/" ;
+  skosmos:shortName "sshomp-resource-type" ;
+  skosmos:language "en" ;
+  skosmos:defaultLanguage "en" ;
+  skosmos:showNotation "false" ;
+  skosmos:showTopConcepts "true" ;
+  skosmos:hasMultiLingualProperty "true" ;
+  skosmos:fullAlphabeticalIndex "true" ;
+  skosmos:mainConceptScheme <https://vocabs.sshopencloud.eu/vocabularies/sshomp-resource-type/> ;
+  skosmos:sparqlGraph <https://vocabs.sshopencloud.eu/vocabularies/sshomp-resource-type/> ;
+  void:sparqlEndpoint <http://apache-jena-fuseki:3030/vocabs-common/sparql>
+.
+
 # ACDH-CH-RedmineIssue: 21416
 :standard a skosmos:Vocabulary, void:Dataset ;
   dc:title "SSK Standard"@en ;
