@@ -1,5 +1,5 @@
-# vocabs-common-production
-Deyploment for the production version of vocabs commons (on sshopencloud.eu)
+# vocabs-common
+Deyploment for the production version of vocabs commons (on sshopencloud.eu). The `main`-branch collects all changes but does not initiate an action. For this a merge to the branch `prod` must be done.
 
 Remarks:
 * The Dockerfile.ubuntu of Skosmos is overwritten with the Dockerfile.ubuntu.adapted file of the root folder
